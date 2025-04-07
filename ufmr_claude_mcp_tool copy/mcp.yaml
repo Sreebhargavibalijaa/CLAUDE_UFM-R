@@ -1,0 +1,28 @@
+name: X-ray Pneumonia Detector
+description: Upload a patient X-ray, vitals, and a short report to detect pneumonia.
+version: 1.0
+type: module
+inputs:
+  - name: patient_id
+    type: text
+  - name: age
+    type: number
+  - name: bp
+    type: number
+  - name: hr
+    type: number
+  - name: report
+    type: text
+  - name: xray_image
+    type: image
+endpoint:
+  url: http://localhost:5050/functions/diagnose
+  method: POST
+  encoding: multipart/form-data
+outputs:
+  - name: majority_diagnosis
+    type: text
+  - name: agent_predictions
+    type: list
+  - name: agent_1_diagnosis
+    type: object

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "xray_diagnosis": {
+      "command": "python3",
+      "args": ["app.py"],
+      "cwd": "/Users/sreebhargavibalija/Desktop/ufmr_claude_mcp_tool/ufmr_server.py"
+    }
+  }
+}
